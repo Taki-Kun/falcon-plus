@@ -12,29 +12,35 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package db
+package cache
 
 import (
-	"database/sql"
-	_ "github.com/go-sql-driver/mysql"
-	"github.com/Taki-Kun/falcon-plus/modules/hbs/g"
-	"log"
+	"github.com/open-falcon/falcon-plus/modules/hbs/db"
+	"sync"
 )
 
-var DB *sql.DB
+// 一个机器可能在多个group下，做一个map缓存hostid与groupid的对应关系
+type SafeHostGroupsMap struct {
+	sync.RWMutex
+	M map[int][]int
+}
 
-func Init() {
-	var err error
-	DB, err = sql.Open("mysql", g.Config().Database)
+var HostGroupsMap = &SafeHostGroupsMap{M: make(map[int][]int)}
+
+func (this *SafeHostGroupsMap) GetGroupIds(hid int) ([]int, bool) {
+	this.RLock()
+	defer this.RUnlock()
+	gids, exists := this.M[hid]
+	return gids, exists
+}
+
+func (this *SafeHostGroupsMap) Init() {
+	m, err := db.QueryHostGroups()
 	if err != nil {
-		log.Fatalln("open db fail:", err)
+		return
 	}
 
-	DB.SetMaxOpenConns(g.Config().MaxConns)
-	DB.SetMaxIdleConns(g.Config().MaxIdle)
-
-	err = DB.Ping()
-	if err != nil {
-		log.Fatalln("ping db fail:", err)
-	}
+	this.Lock()
+	defer this.Unlock()
+	this.M = m
 }

@@ -15,26 +15,34 @@
 package db
 
 import (
-	"database/sql"
-	_ "github.com/go-sql-driver/mysql"
-	"github.com/Taki-Kun/falcon-plus/modules/hbs/g"
 	"log"
 )
 
-var DB *sql.DB
+func QueryHostGroups() (map[int][]int, error) {
+	m := make(map[int][]int)
 
-func Init() {
-	var err error
-	DB, err = sql.Open("mysql", g.Config().Database)
+	sql := "select grp_id, host_id from grp_host"
+	rows, err := DB.Query(sql)
 	if err != nil {
-		log.Fatalln("open db fail:", err)
+		log.Println("ERROR:", err)
+		return m, err
 	}
 
-	DB.SetMaxOpenConns(g.Config().MaxConns)
-	DB.SetMaxIdleConns(g.Config().MaxIdle)
+	defer rows.Close()
+	for rows.Next() {
+		var gid, hid int
+		err = rows.Scan(&gid, &hid)
+		if err != nil {
+			log.Println("ERROR:", err)
+			continue
+		}
 
-	err = DB.Ping()
-	if err != nil {
-		log.Fatalln("ping db fail:", err)
+		if _, exists := m[hid]; exists {
+			m[hid] = append(m[hid], gid)
+		} else {
+			m[hid] = []int{gid}
+		}
 	}
+
+	return m, nil
 }

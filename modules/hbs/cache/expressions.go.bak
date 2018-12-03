@@ -12,29 +12,34 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package db
+package cache
 
 import (
-	"database/sql"
-	_ "github.com/go-sql-driver/mysql"
-	"github.com/Taki-Kun/falcon-plus/modules/hbs/g"
-	"log"
+	"github.com/open-falcon/falcon-plus/common/model"
+	"github.com/open-falcon/falcon-plus/modules/hbs/db"
+	"sync"
 )
 
-var DB *sql.DB
+type SafeExpressionCache struct {
+	sync.RWMutex
+	L []*model.Expression
+}
 
-func Init() {
-	var err error
-	DB, err = sql.Open("mysql", g.Config().Database)
+var ExpressionCache = &SafeExpressionCache{}
+
+func (this *SafeExpressionCache) Get() []*model.Expression {
+	this.RLock()
+	defer this.RUnlock()
+	return this.L
+}
+
+func (this *SafeExpressionCache) Init() {
+	es, err := db.QueryExpressions()
 	if err != nil {
-		log.Fatalln("open db fail:", err)
+		return
 	}
 
-	DB.SetMaxOpenConns(g.Config().MaxConns)
-	DB.SetMaxIdleConns(g.Config().MaxIdle)
-
-	err = DB.Ping()
-	if err != nil {
-		log.Fatalln("ping db fail:", err)
-	}
+	this.Lock()
+	defer this.Unlock()
+	this.L = es
 }

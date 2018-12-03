@@ -2,7 +2,7 @@ package funcs
 
 import (
 	"fmt"
-	"github.com/open-falcon/falcon-plus/modules/agent/g"
+	"github.com/Taki-Kun/falcon-plus/modules/agent/g"
 	"os"
 	"path/filepath"
 	"testing"

@@ -41,6 +41,7 @@ func syncBuiltinMetrics() {
 
 		var ports = []int64{}
 		var paths = []string{}
+		var processes = make(map[string]map[int]string)
 		var procs = make(map[string]map[int]string)
 		var urls = make(map[string]string)
 
@@ -73,6 +74,7 @@ func syncBuiltinMetrics() {
 		checksum = resp.Checksum
 
 		for _, metric := range resp.Metrics {
+			log.Println(metric.Metric, metric.Tags)
 
 			if metric.Metric == g.URL_CHECK_HEALTH {
 				arr := strings.Split(metric.Tags, ",")
@@ -119,6 +121,23 @@ func syncBuiltinMetrics() {
 				continue
 			}
 
+			if metric.Metric == g.PROCESS_MEM {
+				arr := strings.Split(metric.Tags, ",")
+
+				tmpMap := make(map[int]string)
+
+				for i := 0; i < len(arr); i++ {
+					if strings.HasPrefix(arr[i], "name=") {
+						tmpMap[1] = strings.TrimSpace(arr[i][5:])
+					} else if strings.HasPrefix(arr[i], "cmdline=") {
+						tmpMap[2] = strings.TrimSpace(arr[i][8:])
+					}
+				}
+
+				processes[metric.Tags] = tmpMap
+				continue
+			}
+
 			if metric.Metric == g.PROC_NUM {
 				arr := strings.Split(metric.Tags, ",")
 
@@ -135,11 +154,14 @@ func syncBuiltinMetrics() {
 				procs[metric.Tags] = tmpMap
 			}
 		}
+		log.Println("processes", processes)
+		log.Println("procs", procs)
 
 		g.SetReportUrls(urls)
 		g.SetReportPorts(ports)
 		g.SetReportProcs(procs)
 		g.SetDuPaths(paths)
+		g.SetReportProcesses(processes)
 
 	}
 }

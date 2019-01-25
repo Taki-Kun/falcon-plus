@@ -15,9 +15,9 @@
 package falcon_portal
 
 import (
-	log "github.com/Sirupsen/logrus"
-	"github.com/open-falcon/falcon-plus/modules/api/app/model/uic"
-	con "github.com/open-falcon/falcon-plus/modules/api/config"
+	log "github.com/sirupsen/logrus"
+	"github.com/Taki-Kun/falcon-plus/modules/api/app/model/uic"
+	con "github.com/Taki-Kun/falcon-plus/modules/api/config"
 )
 
 type Template struct {

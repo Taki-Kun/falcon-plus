@@ -18,7 +18,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/open-falcon/falcon-plus/modules/gateway/g"
+	"github.com/Taki-Kun/falcon-plus/modules/gateway/g"
 )
 
 func StartSocket() {

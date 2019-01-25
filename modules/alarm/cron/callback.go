@@ -19,12 +19,12 @@ import (
 	"strings"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 
-	"github.com/open-falcon/falcon-plus/common/model"
-	"github.com/open-falcon/falcon-plus/common/utils"
-	"github.com/open-falcon/falcon-plus/modules/alarm/api"
-	"github.com/open-falcon/falcon-plus/modules/alarm/redi"
+	"github.com/Taki-Kun/falcon-plus/common/model"
+	"github.com/Taki-Kun/falcon-plus/common/utils"
+	"github.com/Taki-Kun/falcon-plus/modules/alarm/api"
+	"github.com/Taki-Kun/falcon-plus/modules/alarm/redi"
 	"github.com/toolkits/net/httplib"
 )
 

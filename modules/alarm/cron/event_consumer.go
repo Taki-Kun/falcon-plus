@@ -16,12 +16,12 @@ package cron
 
 import (
 	"encoding/json"
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 
-	cmodel "github.com/open-falcon/falcon-plus/common/model"
-	"github.com/open-falcon/falcon-plus/modules/alarm/api"
-	"github.com/open-falcon/falcon-plus/modules/alarm/g"
-	"github.com/open-falcon/falcon-plus/modules/alarm/redi"
+	cmodel "github.com/Taki-Kun/falcon-plus/common/model"
+	"github.com/Taki-Kun/falcon-plus/modules/alarm/api"
+	"github.com/Taki-Kun/falcon-plus/modules/alarm/g"
+	"github.com/Taki-Kun/falcon-plus/modules/alarm/redi"
 )
 
 func consume(event *cmodel.Event, isHigh bool) {

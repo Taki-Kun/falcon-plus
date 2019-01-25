@@ -15,7 +15,7 @@
 package falcon_portal
 
 import (
-	con "github.com/open-falcon/falcon-plus/modules/api/config"
+	con "github.com/Taki-Kun/falcon-plus/modules/api/config"
 )
 
 // +-------------+------------------+------+-----+-------------------+-----------------------------+

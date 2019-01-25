@@ -15,10 +15,10 @@
 package cron
 
 import (
-	log "github.com/Sirupsen/logrus"
-	"github.com/open-falcon/falcon-plus/modules/alarm/g"
-	"github.com/open-falcon/falcon-plus/modules/alarm/model"
-	"github.com/open-falcon/falcon-plus/modules/alarm/redi"
+	log "github.com/sirupsen/logrus"
+	"github.com/Taki-Kun/falcon-plus/modules/alarm/g"
+	"github.com/Taki-Kun/falcon-plus/modules/alarm/model"
+	"github.com/Taki-Kun/falcon-plus/modules/alarm/redi"
 	"github.com/toolkits/net/httplib"
 	"time"
 )

@@ -16,10 +16,10 @@ package redi
 
 import (
 	"encoding/json"
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/garyburd/redigo/redis"
-	"github.com/open-falcon/falcon-plus/modules/alarm/g"
-	"github.com/open-falcon/falcon-plus/modules/alarm/model"
+	"github.com/Taki-Kun/falcon-plus/modules/alarm/g"
+	"github.com/Taki-Kun/falcon-plus/modules/alarm/model"
 )
 
 const (

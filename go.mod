@@ -58,4 +58,6 @@ require (
 	golang.org/x/net v0.0.0-20170503120255-feeb485667d1
 	golang.org/x/sys v0.0.0-20170427041856-9ccfe848b9db
 	golang.org/x/text v0.0.0-20160816092153-d69c40b4be55
+	gopkg.in/go-playground/validator.v8 v8.18.1
+	gopkg.in/yaml.v2 v2.0.0-20170407172122-cd8b52f8269e
 )

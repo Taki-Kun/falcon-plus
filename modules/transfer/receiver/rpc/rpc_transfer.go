@@ -16,11 +16,11 @@ package rpc
 
 import (
 	"fmt"
-	cmodel "github.com/open-falcon/falcon-plus/common/model"
-	cutils "github.com/open-falcon/falcon-plus/common/utils"
-	"github.com/open-falcon/falcon-plus/modules/transfer/g"
-	"github.com/open-falcon/falcon-plus/modules/transfer/proc"
-	"github.com/open-falcon/falcon-plus/modules/transfer/sender"
+	cmodel "github.com/Taki-Kun/falcon-plus/common/model"
+	cutils "github.com/Taki-Kun/falcon-plus/common/utils"
+	"github.com/Taki-Kun/falcon-plus/modules/transfer/g"
+	"github.com/Taki-Kun/falcon-plus/modules/transfer/proc"
+	"github.com/Taki-Kun/falcon-plus/modules/transfer/sender"
 	"strconv"
 	"time"
 )

@@ -18,7 +18,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/open-falcon/falcon-plus/modules/aggregator/g"
+	"github.com/Taki-Kun/falcon-plus/modules/aggregator/g"
 )
 
 type Worker struct {

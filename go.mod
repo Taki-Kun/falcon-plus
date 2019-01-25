@@ -2,7 +2,7 @@ module github.com/Taki-Kun/falcon-plus
 
 require (
 	github.com/BurntSushi/toml v0.0.0-20150501104042-056c9bc7be71
-	github.com/sirupsen/logrus v0.0.0-20170113011911-61e43dc76f7e
+	github.com/Sirupsen/logrus v0.0.0-20170113011911-61e43dc76f7e
 	github.com/astaxie/beego v1.8.3
 	github.com/chyeh/viper v0.0.0-20160621062518-57390a15d630
 	github.com/emirpasic/gods v1.9.0

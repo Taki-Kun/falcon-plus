@@ -20,7 +20,7 @@ import (
 	"os"
 	"sync"
 
-	"github.com/Taki-Kun/file"
+	"github.com/toolkits/file"
 )
 
 type PluginConfig struct {

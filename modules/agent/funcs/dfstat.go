@@ -16,7 +16,7 @@ package funcs
 
 import (
 	"fmt"
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/Taki-Kun/falcon-plus/common/model"
 	"github.com/Taki-Kun/falcon-plus/modules/agent/g"
 	"github.com/toolkits/nux"

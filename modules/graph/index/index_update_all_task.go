@@ -18,16 +18,16 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"time"
 
 	nsema "github.com/toolkits/concurrent/semaphore"
 	ntime "github.com/toolkits/time"
 
-	cmodel "github.com/open-falcon/falcon-plus/common/model"
-	cutils "github.com/open-falcon/falcon-plus/common/utils"
-	"github.com/open-falcon/falcon-plus/modules/graph/g"
-	proc "github.com/open-falcon/falcon-plus/modules/graph/proc"
+	cmodel "github.com/Taki-Kun/falcon-plus/common/model"
+	cutils "github.com/Taki-Kun/falcon-plus/common/utils"
+	"github.com/Taki-Kun/falcon-plus/modules/graph/g"
+	proc "github.com/Taki-Kun/falcon-plus/modules/graph/proc"
 )
 
 const (

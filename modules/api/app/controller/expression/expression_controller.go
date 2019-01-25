@@ -23,8 +23,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
-	h "github.com/open-falcon/falcon-plus/modules/api/app/helper"
-	f "github.com/open-falcon/falcon-plus/modules/api/app/model/falcon_portal"
+	h "github.com/Taki-Kun/falcon-plus/modules/api/app/helper"
+	f "github.com/Taki-Kun/falcon-plus/modules/api/app/model/falcon_portal"
 )
 
 func GetExpressionList(c *gin.Context) {

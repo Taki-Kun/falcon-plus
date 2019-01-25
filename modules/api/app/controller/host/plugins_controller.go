@@ -18,10 +18,10 @@ import (
 	"fmt"
 	"strconv"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/gin-gonic/gin"
-	h "github.com/open-falcon/falcon-plus/modules/api/app/helper"
-	f "github.com/open-falcon/falcon-plus/modules/api/app/model/falcon_portal"
+	h "github.com/Taki-Kun/falcon-plus/modules/api/app/helper"
+	f "github.com/Taki-Kun/falcon-plus/modules/api/app/model/falcon_portal"
 )
 
 type APICreatePluginInput struct {

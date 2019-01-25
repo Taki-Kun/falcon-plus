@@ -32,5 +32,10 @@ const (
 	NET_PORT_LISTEN  = "net.port.listen"
 	DU_BS            = "du.bs"
 	PROC_NUM         = "proc.num"
-	PROCESS_MEM      = "process.mem"
+	PROCESS_MEM_RSS  = "process.mem.rss"
+	PROCESS_MEM_VMS  = "process.mem.vms"
+	PROCESS_MEM_SWAP  = "process.mem.swap"
+	PROCESS_MEM_DATA  = "process.mem.data"
+	PROCESS_MEM_STACK  = "process.mem.stack"
+	PROCESS_MEM_LOCKED  = "process.mem.locked"
 )

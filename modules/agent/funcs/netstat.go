@@ -16,7 +16,7 @@ package funcs
 
 import (
 	"github.com/Taki-Kun/falcon-plus/common/model"
-	"github.com/toolkits/nux"
+	"github.com/Taki-Kun/nux"
 	"log"
 )
 

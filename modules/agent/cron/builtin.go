@@ -121,7 +121,12 @@ func syncBuiltinMetrics() {
 				continue
 			}
 
-			if metric.Metric == g.PROCESS_MEM {
+			if metric.Metric == g.PROCESS_MEM_RSS ||
+				metric.Metric == g.PROCESS_MEM_VMS ||
+				metric.Metric == g.PROCESS_MEM_SWAP ||
+				metric.Metric == g.PROCESS_MEM_DATA ||
+				metric.Metric == g.PROCESS_MEM_STACK ||
+				metric.Metric == g.PROCESS_MEM_LOCKED {
 				arr := strings.Split(metric.Tags, ",")
 
 				tmpMap := make(map[int]string)
@@ -154,8 +159,6 @@ func syncBuiltinMetrics() {
 				procs[metric.Tags] = tmpMap
 			}
 		}
-		log.Println("processes", processes)
-		log.Println("procs", procs)
 
 		g.SetReportUrls(urls)
 		g.SetReportPorts(ports)

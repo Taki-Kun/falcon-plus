@@ -49,7 +49,7 @@ require (
 	github.com/toolkits/file v0.0.0-20160325033739-a5b3c5147e07
 	github.com/toolkits/http v0.0.0-20150609122824-f3ac6e6c24be
 	github.com/toolkits/net v0.0.0-20160910085801-3f39ab6fe3ce
-	github.com/toolkits/nux v0.0.0-20160907022033-40e948efd153
+	github.com/toolkits/nux v0.0.0-20181220054908-7494d04b55d9
 	github.com/toolkits/proc v0.0.0-20170520054645-8c734d0eb018
 	github.com/toolkits/slice v0.0.0-20141116085117-e44a80af2484
 	github.com/toolkits/str v0.0.0-20160913030958-f82e0f0498cb

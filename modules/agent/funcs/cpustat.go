@@ -17,7 +17,6 @@ package funcs
 import (
 	"github.com/Taki-Kun/falcon-plus/common/model"
 	"github.com/toolkits/nux"
-	"log"
 	"sync"
 )
 
@@ -30,18 +29,9 @@ var (
 	psLock          = new(sync.RWMutex)
 )
 
-var ii int32
-
 func UpdateCpuStat() error {
 	ps, err := nux.CurrentProcStat()
 	if err != nil {
-		return err
-	}
-
-	if ii > 5 {
-		log.Println(ii)
-		ii ++
-	} else {
 		return err
 	}
 

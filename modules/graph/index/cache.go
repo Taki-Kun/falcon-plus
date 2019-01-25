@@ -25,10 +25,10 @@ import (
 
 	tcache "github.com/toolkits/cache/localcache/timedcache"
 
-	cmodel "github.com/open-falcon/falcon-plus/common/model"
-	cutils "github.com/open-falcon/falcon-plus/common/utils"
-	"github.com/open-falcon/falcon-plus/modules/graph/g"
-	"github.com/open-falcon/falcon-plus/modules/graph/proc"
+	cmodel "github.com/Taki-Kun/falcon-plus/common/model"
+	cutils "github.com/Taki-Kun/falcon-plus/common/utils"
+	"github.com/Taki-Kun/falcon-plus/modules/graph/g"
+	"github.com/Taki-Kun/falcon-plus/modules/graph/proc"
 )
 
 const (

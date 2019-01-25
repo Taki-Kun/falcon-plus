@@ -19,17 +19,17 @@ import (
 	"math"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 
 	pfc "github.com/niean/goperfcounter"
-	cmodel "github.com/open-falcon/falcon-plus/common/model"
-	cutils "github.com/open-falcon/falcon-plus/common/utils"
+	cmodel "github.com/Taki-Kun/falcon-plus/common/model"
+	cutils "github.com/Taki-Kun/falcon-plus/common/utils"
 
-	"github.com/open-falcon/falcon-plus/modules/graph/g"
-	"github.com/open-falcon/falcon-plus/modules/graph/index"
-	"github.com/open-falcon/falcon-plus/modules/graph/proc"
-	"github.com/open-falcon/falcon-plus/modules/graph/rrdtool"
-	"github.com/open-falcon/falcon-plus/modules/graph/store"
+	"github.com/Taki-Kun/falcon-plus/modules/graph/g"
+	"github.com/Taki-Kun/falcon-plus/modules/graph/index"
+	"github.com/Taki-Kun/falcon-plus/modules/graph/proc"
+	"github.com/Taki-Kun/falcon-plus/modules/graph/rrdtool"
+	"github.com/Taki-Kun/falcon-plus/modules/graph/store"
 )
 
 type Graph int

@@ -2,7 +2,6 @@ module github.com/Taki-Kun/falcon-plus
 
 require (
 	github.com/BurntSushi/toml v0.0.0-20150501104042-056c9bc7be71
-	github.com/Sirupsen/logrus v0.0.0-20170113011911-61e43dc76f7e
 	github.com/Taki-Kun/process v0.0.0-20190127231558-37b8da3d7377
 	github.com/astaxie/beego v1.8.3
 	github.com/chyeh/cast v0.0.0-20170303145408-e4f812705869
@@ -22,7 +21,7 @@ require (
 	github.com/magiconair/properties v0.0.0-20170321093039-51463bfca257
 	github.com/manucorporat/sse v0.0.0-20160126180136-ee05b128a739
 	github.com/masato25/resty v0.0.0-20161209040832-927c0e7d74a0
-	github.com/masato25/yaag v0.0.0-20161213083940-b04f9b8a11ae
+	github.com/masato25/yaag v0.0.0-20170704095552-00862ec4db8e
 	github.com/mattn/go-isatty v0.0.2
 	github.com/mindprince/gonvml v0.0.0-20180111080136-eea82dc7bb37
 	github.com/mitchellh/mapstructure v0.0.0-20170422000251-cc8532a8e9a5

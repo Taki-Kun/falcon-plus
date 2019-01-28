@@ -15,17 +15,17 @@
 package sender
 
 import (
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"math/rand"
 	"time"
 
 	pfc "github.com/niean/goperfcounter"
-	cmodel "github.com/open-falcon/falcon-plus/common/model"
-	cutils "github.com/open-falcon/falcon-plus/common/utils"
+	cmodel "github.com/Taki-Kun/falcon-plus/common/model"
+	cutils "github.com/Taki-Kun/falcon-plus/common/utils"
 	nsema "github.com/toolkits/concurrent/semaphore"
 	nlist "github.com/toolkits/container/list"
 
-	"github.com/open-falcon/falcon-plus/modules/gateway/g"
+	"github.com/Taki-Kun/falcon-plus/modules/gateway/g"
 )
 
 func startSendTasks() {

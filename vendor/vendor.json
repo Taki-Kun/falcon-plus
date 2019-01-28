@@ -27,8 +27,8 @@
 		{
 			"checksumSHA1": "3wKVAKACcQc5f6lLn/LrRLLVCMo=",
 			"path": "github.com/chyeh/cast",
-			"revision": "14ed842421beffe8201f18ece67578ffdf59526c",
-			"revisionTime": "2017-02-10T07:00:46Z"
+			"revision": "e4f812705869f46d217ec7d32ba2d3259aa1b1e0",
+			"revisionTime": "2017-02-10T15:00:46Z"
 		},
 		{
 			"checksumSHA1": "lIEevSZRxMyjJ3o3UEj7uRc49QI=",
@@ -481,10 +481,10 @@
 			"revisionTime": "2016-09-10T08:58:01Z"
 		},
 		{
-			"checksumSHA1": "y8ZzF+8Tcqbo1lxChvzC3Lq+9XQ=",
+			"checksumSHA1": "4wB1bl+P4L2YZYbcZMNaqnFlaO4=",
 			"path": "github.com/toolkits/nux",
-			"revision": "40e948efd15371c0381842833894bc71dea076e4",
-			"revisionTime": "2016-09-07T02:20:33Z"
+			"revision": "7494d04b55d9a82c404a7625bd65d918bca734ac",
+			"revisionTime": "2018-12-20T05:49:08Z"
 		},
 		{
 			"checksumSHA1": "/MzoyPy+MujCNT0eYLFpfAj3+pE=",
@@ -559,5 +559,5 @@
 			"revisionTime": "2017-04-07T17:21:22Z"
 		}
 	],
-	"rootPath": "github.com/open-falcon/falcon-plus"
+	"rootPath": "github.com/Taki-Kun/falcon-plus"
 }

@@ -16,7 +16,7 @@ package db
 
 import (
 	"fmt"
-	"github.com/open-falcon/falcon-plus/common/model"
+	"github.com/Taki-Kun/falcon-plus/common/model"
 	"github.com/toolkits/container/set"
 	"log"
 	"strings"
@@ -89,7 +89,9 @@ func QueryStrategies(tpls map[int]*model.Template) (map[int]*model.Strategy, err
 
 func QueryBuiltinMetrics(tids string) ([]*model.BuiltinMetric, error) {
 	sql := fmt.Sprintf(
-		"select metric, tags from strategy where tpl_id in (%s) and metric in ('net.port.listen', 'proc.num', 'du.bs', 'url.check.health')",
+		"select metric, tags from strategy where tpl_id in (%s) and metric in ('net.port.listen', 'proc.num'," +
+			" 'du.bs', 'url.check.health', 'process.mem.rss', 'process.mem.vms', 'process.mem.swap', 'process.mem.data'" +
+			" 'process.mem.stack' + 'process.mem.locked')",
 		tids,
 	)
 

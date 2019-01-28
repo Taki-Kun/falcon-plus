@@ -19,13 +19,13 @@ import (
 	"regexp"
 	"strings"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/emirpasic/gods/maps/hashmap"
 	"github.com/gin-gonic/gin"
-	cmodel "github.com/open-falcon/falcon-plus/common/model"
-	h "github.com/open-falcon/falcon-plus/modules/api/app/helper"
-	m "github.com/open-falcon/falcon-plus/modules/api/app/model/graph"
-	u "github.com/open-falcon/falcon-plus/modules/api/app/utils"
+	cmodel "github.com/Taki-Kun/falcon-plus/common/model"
+	h "github.com/Taki-Kun/falcon-plus/modules/api/app/helper"
+	m "github.com/Taki-Kun/falcon-plus/modules/api/app/model/graph"
+	u "github.com/Taki-Kun/falcon-plus/modules/api/app/utils"
 )
 
 type APIGrafanaMainQueryInputs struct {

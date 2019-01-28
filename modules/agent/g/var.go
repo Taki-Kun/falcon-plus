@@ -16,7 +16,7 @@ package g
 
 import (
 	"bytes"
-	"github.com/open-falcon/falcon-plus/common/model"
+	"github.com/Taki-Kun/falcon-plus/common/model"
 	"github.com/toolkits/slice"
 	"log"
 	"net"
@@ -179,6 +179,26 @@ func SetReportProcs(procs map[string]map[int]string) {
 	reportProcsLock.Lock()
 	defer reportProcsLock.Unlock()
 	reportProcs = procs
+}
+
+var (
+	// tags => {1=>name, 2=>cmdline}
+	// e.g. 'name=falcon-agent'=>{1=>falcon-agent}
+	// e.g. 'cmdline=xx'=>{2=>xx}
+	reportProcesses     map[string]map[int]string
+	reportProcessesLock = new(sync.RWMutex)
+)
+
+func ReportProcesses() map[string]map[int]string {
+	reportProcessesLock.RLock()
+	defer reportProcessesLock.RUnlock()
+	return reportProcesses
+}
+
+func SetReportProcesses(processes map[string]map[int]string) {
+	reportProcessesLock.Lock()
+	defer reportProcessesLock.Unlock()
+	reportProcesses = processes
 }
 
 var (

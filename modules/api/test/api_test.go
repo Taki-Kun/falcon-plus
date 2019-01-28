@@ -21,15 +21,15 @@ import (
 	"strings"
 	"testing"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/masato25/resty"
 	. "github.com/smartystreets/goconvey/convey"
 	"github.com/spf13/viper"
 
-	cutils "github.com/open-falcon/falcon-plus/common/utils"
-	"github.com/open-falcon/falcon-plus/modules/api/app/model/uic"
-	"github.com/open-falcon/falcon-plus/modules/api/app/utils"
-	cfg "github.com/open-falcon/falcon-plus/modules/api/config"
+	cutils "github.com/Taki-Kun/falcon-plus/common/utils"
+	"github.com/Taki-Kun/falcon-plus/modules/api/app/model/uic"
+	"github.com/Taki-Kun/falcon-plus/modules/api/app/utils"
+	cfg "github.com/Taki-Kun/falcon-plus/modules/api/config"
 )
 
 var (

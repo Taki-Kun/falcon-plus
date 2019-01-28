@@ -15,10 +15,10 @@
 package http
 
 import (
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/gin-gonic/gin"
-	cutils "github.com/open-falcon/falcon-plus/common/utils"
-	"github.com/open-falcon/falcon-plus/modules/graph/index"
+	cutils "github.com/Taki-Kun/falcon-plus/common/utils"
+	"github.com/Taki-Kun/falcon-plus/modules/graph/index"
 )
 
 func configIndexRoutes() {

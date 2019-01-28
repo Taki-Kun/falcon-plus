@@ -16,8 +16,8 @@ package cron
 
 import (
 	"fmt"
-	"github.com/open-falcon/falcon-plus/common/model"
-	"github.com/open-falcon/falcon-plus/modules/agent/g"
+	"github.com/Taki-Kun/falcon-plus/common/model"
+	"github.com/Taki-Kun/falcon-plus/modules/agent/g"
 	"log"
 	"time"
 )

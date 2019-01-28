@@ -16,9 +16,9 @@ package sender
 
 import (
 	"bytes"
-	cmodel "github.com/open-falcon/falcon-plus/common/model"
-	"github.com/open-falcon/falcon-plus/modules/transfer/g"
-	"github.com/open-falcon/falcon-plus/modules/transfer/proc"
+	cmodel "github.com/Taki-Kun/falcon-plus/common/model"
+	"github.com/Taki-Kun/falcon-plus/modules/transfer/g"
+	"github.com/Taki-Kun/falcon-plus/modules/transfer/proc"
 	nsema "github.com/toolkits/concurrent/semaphore"
 	"github.com/toolkits/container/list"
 	"log"

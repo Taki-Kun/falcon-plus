@@ -17,11 +17,11 @@ package http
 import (
 	"net/http"
 
-	"github.com/open-falcon/falcon-plus/modules/nodata/collector"
-	"github.com/open-falcon/falcon-plus/modules/nodata/config"
-	"github.com/open-falcon/falcon-plus/modules/nodata/config/service"
-	"github.com/open-falcon/falcon-plus/modules/nodata/g"
-	"github.com/open-falcon/falcon-plus/modules/nodata/judge"
+	"github.com/Taki-Kun/falcon-plus/modules/nodata/collector"
+	"github.com/Taki-Kun/falcon-plus/modules/nodata/config"
+	"github.com/Taki-Kun/falcon-plus/modules/nodata/config/service"
+	"github.com/Taki-Kun/falcon-plus/modules/nodata/g"
+	"github.com/Taki-Kun/falcon-plus/modules/nodata/judge"
 )
 
 func configProcHttpRoutes() {

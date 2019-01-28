@@ -18,12 +18,12 @@ import (
 	"fmt"
 	"strconv"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
-	h "github.com/open-falcon/falcon-plus/modules/api/app/helper"
-	f "github.com/open-falcon/falcon-plus/modules/api/app/model/falcon_portal"
-	u "github.com/open-falcon/falcon-plus/modules/api/app/utils"
+	h "github.com/Taki-Kun/falcon-plus/modules/api/app/helper"
+	f "github.com/Taki-Kun/falcon-plus/modules/api/app/model/falcon_portal"
+	u "github.com/Taki-Kun/falcon-plus/modules/api/app/utils"
 )
 
 type APIGetTemplatesOutput struct {

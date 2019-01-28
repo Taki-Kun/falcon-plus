@@ -15,8 +15,8 @@
 package cron
 
 import (
-	"github.com/open-falcon/falcon-plus/common/model"
-	"github.com/open-falcon/falcon-plus/modules/agent/g"
+	"github.com/Taki-Kun/falcon-plus/common/model"
+	"github.com/Taki-Kun/falcon-plus/modules/agent/g"
 	"log"
 	"strconv"
 	"strings"
@@ -41,6 +41,7 @@ func syncBuiltinMetrics() {
 
 		var ports = []int64{}
 		var paths = []string{}
+		var processes = make(map[string]map[int]string)
 		var procs = make(map[string]map[int]string)
 		var urls = make(map[string]string)
 
@@ -119,6 +120,28 @@ func syncBuiltinMetrics() {
 				continue
 			}
 
+			if metric.Metric == g.PROCESS_MEM_RSS ||
+				metric.Metric == g.PROCESS_MEM_VMS ||
+				metric.Metric == g.PROCESS_MEM_SWAP ||
+				metric.Metric == g.PROCESS_MEM_DATA ||
+				metric.Metric == g.PROCESS_MEM_STACK ||
+				metric.Metric == g.PROCESS_MEM_LOCKED {
+				arr := strings.Split(metric.Tags, ",")
+
+				tmpMap := make(map[int]string)
+
+				for i := 0; i < len(arr); i++ {
+					if strings.HasPrefix(arr[i], "name=") {
+						tmpMap[1] = strings.TrimSpace(arr[i][5:])
+					} else if strings.HasPrefix(arr[i], "cmdline=") {
+						tmpMap[2] = strings.TrimSpace(arr[i][8:])
+					}
+				}
+
+				processes[metric.Tags] = tmpMap
+				continue
+			}
+
 			if metric.Metric == g.PROC_NUM {
 				arr := strings.Split(metric.Tags, ",")
 
@@ -140,6 +163,7 @@ func syncBuiltinMetrics() {
 		g.SetReportPorts(ports)
 		g.SetReportProcs(procs)
 		g.SetDuPaths(paths)
+		g.SetReportProcesses(processes)
 
 	}
 }

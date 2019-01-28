@@ -15,8 +15,8 @@
 package cache
 
 import (
-	"github.com/open-falcon/falcon-plus/common/model"
-	"github.com/open-falcon/falcon-plus/modules/hbs/db"
+	"github.com/Taki-Kun/falcon-plus/common/model"
+	"github.com/Taki-Kun/falcon-plus/modules/hbs/db"
 	"github.com/toolkits/container/set"
 	"log"
 	"strconv"

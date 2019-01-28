@@ -17,7 +17,7 @@ package api
 import (
 	"testing"
 
-	"github.com/open-falcon/falcon-plus/modules/alarm/g"
+	"github.com/Taki-Kun/falcon-plus/modules/alarm/g"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

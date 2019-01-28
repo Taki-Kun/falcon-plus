@@ -74,7 +74,6 @@ func syncBuiltinMetrics() {
 		checksum = resp.Checksum
 
 		for _, metric := range resp.Metrics {
-			log.Println(metric.Metric, metric.Tags)
 
 			if metric.Metric == g.URL_CHECK_HEALTH {
 				arr := strings.Split(metric.Tags, ",")

@@ -3,6 +3,7 @@ module github.com/Taki-Kun/falcon-plus
 require (
 	github.com/BurntSushi/toml v0.0.0-20150501104042-056c9bc7be71
 	github.com/Sirupsen/logrus v0.0.0-20170113011911-61e43dc76f7e
+	github.com/Taki-Kun/process v0.0.0-20190127231558-37b8da3d7377
 	github.com/astaxie/beego v1.8.3
 	github.com/chyeh/viper v0.0.0-20160621062518-57390a15d630
 	github.com/emirpasic/gods v1.9.0
@@ -31,6 +32,7 @@ require (
 	github.com/pelletier/go-buffruneio v0.2.0
 	github.com/pelletier/go-toml v0.0.0-20170508001413-23f644976aa7
 	github.com/satori/go.uuid v0.0.0-20170321230731-5bf94b69c6b6
+	github.com/sirupsen/logrus v1.3.0
 	github.com/smartystreets/assertions v0.0.0-20170507041255-6165f082cc33
 	github.com/smartystreets/goconvey v0.0.0-20170508121205-af8e7d560364
 	github.com/spf13/afero v0.0.0-20170217164146-9be650865eab
@@ -56,7 +58,7 @@ require (
 	github.com/toolkits/sys v0.0.0-20170615103026-1f33b217ffaf
 	github.com/toolkits/time v0.0.0-20160524122720-c274716e8d7f
 	golang.org/x/net v0.0.0-20170503120255-feeb485667d1
-	golang.org/x/sys v0.0.0-20170427041856-9ccfe848b9db
+	golang.org/x/sys v0.0.0-20180905080454-ebe1bf3edb33
 	golang.org/x/text v0.0.0-20160816092153-d69c40b4be55
 	gopkg.in/go-playground/validator.v8 v8.18.1
 	gopkg.in/yaml.v2 v2.0.0-20170407172122-cd8b52f8269e

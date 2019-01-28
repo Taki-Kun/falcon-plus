@@ -5,6 +5,7 @@ github.com/StackExchange/wmi v0.0.0-20181212234831-e0a55b97c705/go.mod h1:3eOhrU
 github.com/Taki-Kun/process v0.0.0-20190127231558-37b8da3d7377 h1:9tmpqm1MD5up+mgUiSoke1Zc+bAbLE30uYP5+IrP/zw=
 github.com/Taki-Kun/process v0.0.0-20190127231558-37b8da3d7377/go.mod h1:ASLvOnLg1GgtzJAnDtM5G+qTilvmECelJ/fzULW7AkY=
 github.com/astaxie/beego v1.8.3/go.mod h1:0R4++1tUqERR0WYFWdfkcrsyoVBCG4DgpDGokT3yb+U=
+github.com/chyeh/cast v0.0.0-20170303145408-e4f812705869/go.mod h1:rGBB5/I/lww9V//7pCsuD2SzRZklz9zgRfmDXpxfTB4=
 github.com/chyeh/viper v0.0.0-20160621062518-57390a15d630/go.mod h1:P7AGPGXCiULqgJWwH34G5ZZ8SPZGIBSS8qeRiNjmPB4=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/emirpasic/gods v1.9.0 h1:rUF4PuzEjMChMiNsVjdI+SyLu7rEqpQ5reNFnhC7oFo=

@@ -5,6 +5,7 @@ require (
 	github.com/Sirupsen/logrus v0.0.0-20170113011911-61e43dc76f7e
 	github.com/Taki-Kun/process v0.0.0-20190127231558-37b8da3d7377
 	github.com/astaxie/beego v1.8.3
+	github.com/chyeh/cast v0.0.0-20170303145408-e4f812705869
 	github.com/chyeh/viper v0.0.0-20160621062518-57390a15d630
 	github.com/emirpasic/gods v1.9.0
 	github.com/fsnotify/fsnotify v0.0.0-20170329110642-4da3e2cfbabc

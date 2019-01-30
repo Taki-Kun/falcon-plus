@@ -89,9 +89,16 @@ func QueryStrategies(tpls map[int]*model.Template) (map[int]*model.Strategy, err
 
 func QueryBuiltinMetrics(tids string) ([]*model.BuiltinMetric, error) {
 	sql := fmt.Sprintf(
-		"select metric, tags from strategy where tpl_id in (%s) and metric in ('net.port.listen', 'proc.num'," +
-			" 'du.bs', 'url.check.health', 'process.mem.rss', 'process.mem.vms', 'process.mem.swap', 'process.mem.data'" +
-			" 'process.mem.stack' + 'process.mem.locked')",
+		"select metric, tags from strategy where tpl_id in (%s) and metric in ('process.cpu.busy.percent', " +
+			"'net.port.listen', 'proc.num', 'du.bs', 'url.check.health', 'process.mem.rss', 'process.mem.vms', " +
+			"'process.mem.swap', 'process.mem.data', 'process.mem.stack', 'process.mem.locked', " +
+			"'process.threads.number', 'process.fd.number', 'process.ctxSwitches.voluntary', " +
+			"'process.ctxSwitches.involuntary', 'process.iocounters.readcount', 'process.iocounters.writecount', " +
+			"'process.iocounters.readbytes', 'process.iocounters.writebytes', 'process.netiocounters.bytesSent', " +
+			"'process.netiocounters.bytesRecv', 'process.netiocounters.packetsSent', " +
+			"'process.netiocounters.packetsRecv', 'process.netiocounters.errin', 'process.netiocounters.errout', " +
+			"'process.netiocounters.dropin', 'process.netiocounters.dropout', 'process.netiocounters.fifoin', " +
+			"'process.netiocounters.fifoout', 'process.connections.number')",
 		tids,
 	)
 

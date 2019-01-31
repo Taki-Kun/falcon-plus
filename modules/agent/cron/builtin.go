@@ -125,7 +125,27 @@ func syncBuiltinMetrics() {
 				metric.Metric == g.PROCESS_MEM_SWAP ||
 				metric.Metric == g.PROCESS_MEM_DATA ||
 				metric.Metric == g.PROCESS_MEM_STACK ||
-				metric.Metric == g.PROCESS_MEM_LOCKED {
+				metric.Metric == g.PROCESS_MEM_LOCKED ||
+				metric.Metric == g.PROCESS_CPU_BUSY_PERCENT ||
+				metric.Metric == g.PROCESS_THREADS_NUMBER ||
+				metric.Metric == g.PROCESS_FD_NUMBER ||
+				metric.Metric == g.PROCESS_CTXSWITCHESVOLUNTARY ||
+				metric.Metric == g.PROCESS_CTXSWITCHESINVOLUNTARY ||
+				metric.Metric == g.PROCESS_IOCOUNTERS_READCOUNT ||
+				metric.Metric == g.PROCESS_IOCOUNTERS_WRITECOUNT ||
+				metric.Metric == g.PROCESS_IOCOUNTERS_READBYTES ||
+				metric.Metric == g.PROCESS_IOCOUNTERS_WRITEBYTES ||
+				metric.Metric == g.PROCESS_NETIOCOUNTERS_BYTESSENT ||
+				metric.Metric == g.PROCESS_NETIOCOUNTERS_BYTESRECV ||
+				metric.Metric == g.PROCESS_NETIOCOUNTERS_PACKETSSENT ||
+				metric.Metric == g.PROCESS_NETIOCOUNTERS_PACKETSRECV ||
+				metric.Metric == g.PROCESS_NETIOCOUNTERS_ERRIN ||
+				metric.Metric == g.PROCESS_NETIOCOUNTERS_ERROUT ||
+				metric.Metric == g.PROCESS_NETIOCOUNTERS_DROPIN ||
+				metric.Metric == g.PROCESS_NETIOCOUNTERS_DROPOUT ||
+				metric.Metric == g.PROCESS_NETIOCOUNTERS_FIFOIN ||
+				metric.Metric == g.PROCESS_NETIOCOUNTERS_FIFOOUT ||
+				metric.Metric == g.PROCESS_NETIOCOUNTERS_NUMBER {
 				arr := strings.Split(metric.Tags, ",")
 
 				tmpMap := make(map[int]string)

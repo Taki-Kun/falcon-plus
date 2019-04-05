@@ -96,6 +96,9 @@ func ProcessPrepared(tags string) bool {
 
 func ProcessMetrics() (L []*model.MetricValue) {
 
+	processLock.Lock()
+	defer processLock.Unlock()
+
 	for tags, processesStat := range processStatMapHistory[0] {
 		if !ProcessPrepared(tags) {
 			continue

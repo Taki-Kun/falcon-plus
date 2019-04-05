@@ -3,7 +3,7 @@ module github.com/Taki-Kun/falcon-plus
 go 1.12
 
 require (
-	github.com/Taki-Kun/process v0.0.0-20190405122645-a21adaa9be9e
+	github.com/Taki-Kun/process v0.0.0-20190405123327-e8f677bf3a94
 	github.com/astaxie/beego v1.11.1
 	github.com/denisenkom/go-mssqldb v0.0.0-20190401154936-ce35bd87d4b3 // indirect
 	github.com/emirpasic/gods v1.12.0

@@ -22,7 +22,7 @@ import (
 	"testing"
 
 	log "github.com/sirupsen/logrus"
-	"github.com/masato25/resty"
+	"gopkg.in/resty.v1"
 	. "github.com/smartystreets/goconvey/convey"
 	"github.com/spf13/viper"
 
